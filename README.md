@@ -1,38 +1,76 @@
 # Machine Learning Homework - Exoplanet Exploration
 
-![exoplanets.jpg](Images/exoplanets.jpg)
-
-### Before You Begin
-
-1. Create a new repository for this project called `machine-learning-challenge`. **Do not add this homework to an existing repository**.
-
-2. Clone the new repository to your computer.
-
-3. Give each model you choose their own Jupyter notebook, **do not use more than one model per notebook.**
-
-4. Save your best model to a file. This will be the model used to test your accuracy and used for grading.
-
-5. Commit your Jupyter notebooks and model file and push them to GitHub.
-
-## Note
-
-Keep in mind that this homework is optional! However, you will gain a much greater understanding of testing and tuning different Classification models if you do complete it.
-
 ## Background
 
 Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to discover hidden planets outside of our solar system.
 
-To help process this data, you will create machine learning models capable of classifying candidate exoplanets from the raw dataset.
+## Summary
 
-In this homework assignment, you will need to:
+Three models were built to represent the data using the target value of 3 CANDIDATE, CONFIRMED, and FALSE POSITIVE. Later an assumption was used to group target into two categories. CANDIDATE and CONFIRMED were grouped together as 0 and FALSE POSITIVE was set to 1.
 
-1. [Preprocess the raw data](#Preprocessing)
-2. [Tune the models](#Tune-Model-Parameters)
-3. [Compare two or more models](#Evaluate-Model-Performance)
 
-- - -
+with Target of 3
+## Logistic Regression (0.8072)
 
-## Instructions
+{'C': 10, 'max_iter': 1000, 'penalty': 'l1', 'solver': 'liblinear'}
+Best Score: 0.8071687685109046
+
+### Classification Report
+
+            precision    recall  f1-score   support
+
+           0       0.59      0.60      0.60       411
+           1       0.67      0.68      0.67       484
+           2       0.98      0.97      0.97       853
+
+    accuracy                           0.80      1748
+   macro avg       0.75      0.75      0.75      1748
+weighted avg       0.80      0.80      0.80      1748
+
+
+
+## Logistic Regression with Target of 2
+
+{'C': 0.01, 'max_iter': 1000, 'penalty': 'l1', 'solver': 'liblinear'}
+Best Score: 0.9782559180317131
+
+### Classification Report
+
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.98       895
+           1       0.98      0.97      0.97       853
+
+    accuracy                           0.98      1748
+   macro avg       0.98      0.98      0.98      1748
+weighted avg       0.98      0.98      0.98      1748
+
+## Random Forrest 
+
+
+
+## K Nearest Neighbor  (Best Score: 0.8104)
+
+
+{'algorithm': 'auto', 'leaf_size': 5, 'n_neighbors': 20, 'weights': 'distance'}
+Best Score: 0.8104115879172458
+['CANDIDATE' 'CONFIRMED' 'FALSE POSITIVE']
+                precision    recall  f1-score   support
+
+     CANDIDATE       0.57      0.62      0.59       411
+     CONFIRMED       0.66      0.62      0.64       484
+FALSE POSITIVE       0.98      0.97      0.97       853
+
+      accuracy                           0.79      1748
+     macro avg       0.74      0.74      0.74      1748
+  weighted avg       0.79      0.79      0.79      1748
+
+
+
+## Nueral Network  (Loss: 0.3108, Accuracy: 0.8535)
+
+
+
 
 ### Preprocess the Data
 
