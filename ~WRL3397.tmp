@@ -8,64 +8,67 @@ Over a period of nine years in deep space, the NASA Kepler space telescope has b
 
 Three models were built to represent the data using the target value of 3 CANDIDATE, CONFIRMED, and FALSE POSITIVE. Later an assumption was used to group target into two categories. CANDIDATE and CONFIRMED were grouped together as 0 and FALSE POSITIVE was set to 1.
 
-Random Forrest was used to remove features from 40 down to 60 and still retrain accuracy of 0.85 or better in most models
-
 
 with Target of 3
+## Logistic Regression (0.8072)
 
+{'C': 10, 'max_iter': 1000, 'penalty': 'l1', 'solver': 'liblinear'}
+Best Score: 0.8071687685109046
 
-## Logistic Regression (Accuracy 0.85)
+### Classification Report
 
+            precision    recall  f1-score   support
 
-Classification Report 
+           0       0.59      0.60      0.60       411
+           1       0.67      0.68      0.67       484
+           2       0.98      0.97      0.97       853
 
-           0       0.72      0.62      0.67       411
-           1       0.72      0.78      0.75       484
-           2       0.98      1.00      0.99       853
-
-    accuracy                           0.85      1748
-   macro avg       0.81      0.80      0.80      1748
-weighted avg       0.85      0.85      0.85      1748
-
-## Random Forrest   (Accuracy 0.90)
-
-
-Classification Report
-
-               precision    recall  f1-score   support
-
-     CANDIDATE       0.82      0.77      0.80       411
-     CONFIRMED       0.83      0.84      0.83       484
-FALSE POSITIVE       0.98      1.00      0.99       853
-
-      accuracy                           0.90      1748
-     macro avg       0.87      0.87      0.87      1748
-  weighted avg       0.90      0.90      0.90      1748
+    accuracy                           0.80      1748
+   macro avg       0.75      0.75      0.75      1748
+weighted avg       0.80      0.80      0.80      1748
 
 
 
+## Logistic Regression with Target of 2
 
-## K Nearest Neighbor  (Accuracy: 0.84
- Classification Report
-     
-                 precision    recall  f1-score   support
+{'C': 0.01, 'max_iter': 1000, 'penalty': 'l1', 'solver': 'liblinear'}
+Best Score: 0.9782559180317131
 
-     CANDIDATE       0.67      0.65      0.66       411
-     CONFIRMED       0.72      0.71      0.72       484
-FALSE POSITIVE       0.98      0.99      0.98       853
+### Classification Report
 
-      accuracy                           0.84      1748
-     macro avg       0.79      0.79      0.79      1748
-  weighted avg       0.83      0.84      0.83      1748
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.98       895
+           1       0.98      0.97      0.97       853
+
+    accuracy                           0.98      1748
+   macro avg       0.98      0.98      0.98      1748
+weighted avg       0.98      0.98      0.98      1748
+
+## Random Forrest 
+
+
+
+## K Nearest Neighbor  (Best Score: 0.8104)
+
+
+{'algorithm': 'auto', 'leaf_size': 5, 'n_neighbors': 20, 'weights': 'distance'}
+Best Score: 0.8104115879172458
+['CANDIDATE' 'CONFIRMED' 'FALSE POSITIVE']
+                precision    recall  f1-score   support
+
+     CANDIDATE       0.57      0.62      0.59       411
+     CONFIRMED       0.66      0.62      0.64       484
+FALSE POSITIVE       0.98      0.97      0.97       853
+
+      accuracy                           0.79      1748
+     macro avg       0.74      0.74      0.74      1748
+  weighted avg       0.79      0.79      0.79      1748
 
 
 
 ## Nueral Network  (Loss: 0.3108, Accuracy: 0.8535)
 
-## Assuming CANDIDATE and CONFIRMED are the same
-CANDIDATE and CONFIRMED were grouped together as 0 and FALSE POSITIVE was set to 1.
-
-## Logistic Regression with Target of 2
 
 
 
