@@ -16,27 +16,8 @@ Random Forrest was used to remove features from 40 down to 60 and still retrain 
 
 ## Logistic Regression (Accuracy 0.85)
 
-               precision    recall  f1-score   support
-
-            0       1.00      0.98      0.99       895
-            1       0.98      1.00      0.99       853
-
-     accuracy                           0.99      1748
-    macro avg       0.99      0.99      0.99      1748
- weighted avg       0.99      0.99      0.99      1748
-
 
 ## Random Forrest   (Accuracy 0.90)
-
-                precision    recall  f1-score   support
-
-     CANDIDATE       0.82      0.77      0.80       411
-     CONFIRMED       0.83      0.84      0.83       484
-FALSE POSITIVE       0.98      1.00      0.99       853
-
-      accuracy                           0.90      1748
-     macro avg       0.87      0.87      0.87      1748
-  weighted avg       0.90      0.90      0.90      1748
 
 
 ## K Nearest Neighbor  (Accuracy: 0.84)
