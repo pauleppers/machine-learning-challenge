@@ -11,60 +11,45 @@ Three models were built to represent the data using the target value of 3 CANDID
 Random Forrest was used to remove features from 40 down to 60 and still retrain accuracy of 0.85 or better in most models
 
 
-with Target of 3
+# With Target of 3
 
 
 ## Logistic Regression (Accuracy 0.85)
 
+              precision    recall  f1-score   support
 
-Classification Report 
+           0       1.00      0.98      0.99       895
+           1       0.98      1.00      0.99       853
 
-           0       0.72      0.62      0.67       411
-           1       0.72      0.78      0.75       484
-           2       0.98      1.00      0.99       853
+    accuracy                           0.99      1748
+   macro avg       0.99      0.99      0.99      1748
+weighted avg       0.99      0.99      0.99      1748
 
-    accuracy                           0.85      1748
-   macro avg       0.81      0.80      0.80      1748
-weighted avg       0.85      0.85      0.85      1748
 
 ## Random Forrest   (Accuracy 0.90)
 
-
-Classification Report
-
-|              | precision  |  recall | f1-score  | support  |
-
-|     CANDIDATE |      0.82   |   0.77  |    0.80   |   411|
-|     CONFIRMED |      0.83   |   0.84  |    0.83   |   484|
-|FALSE POSITIVE |      0.98   |   1.00  |    0.99   |   853|
-
-|      accuracy |             |         |    0.90   |   1748|
-|     macro avg |      0.87   |   0.87  |    0.87   |   1748|
-|  weighted avg |      0.90   |   0.90  |    0.90   |   1748|
-
-
-
-
-## K Nearest Neighbor  (Accuracy: 0.84
                 precision    recall  f1-score   support
 
-     CANDIDATE       0.67      0.65      0.66       411
-     CONFIRMED       0.72      0.71      0.72       484
-FALSE POSITIVE       0.98      0.99      0.98       853
+     CANDIDATE       0.82      0.77      0.80       411
+     CONFIRMED       0.83      0.84      0.83       484
+FALSE POSITIVE       0.98      1.00      0.99       853
 
-      accuracy                           0.84      1748
-     macro avg       0.79      0.79      0.79      1748
-  weighted avg       0.83      0.84      0.83      1748
+      accuracy                           0.90      1748
+     macro avg       0.87      0.87      0.87      1748
+  weighted avg       0.90      0.90      0.90      1748
 
 
+## K Nearest Neighbor  (Accuracy: 0.84)
 
-## Nueral Network  (Loss: 0.3108, Accuracy: 0.8535)
 
-## Assuming CANDIDATE and CONFIRMED are the same
-CANDIDATE and CONFIRMED were grouped together as 0 and FALSE POSITIVE was set to 1.
+## Neural Network  (Loss: 0.316, Accuracy: 0.858)
 
-## Logistic Regression with Target of 2
 
+# With Target of 2
+
+Assuming CANDIDATE and CONFIRMED are the same, they were grouped together as 0 and FALSE POSITIVE was set to 1 in Logistics Regression.
+
+## Logistic Regression (Accuracy 0.99)
 
 
 ### Preprocess the Data
