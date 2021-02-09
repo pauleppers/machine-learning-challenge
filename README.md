@@ -21,8 +21,8 @@ Random Forrest was used to remove features from 40 down to 60 and still retrain 
            0       1.00      0.98      0.99       895
            1       0.98      1.00      0.99       853
 
-    accuracy                           0.99      1748
-   macro avg       0.99      0.99      0.99      1748
+accuracy                               0.99      1748
+macro avg          0.99      0.99      0.99      1748
 weighted avg       0.99      0.99      0.99      1748
 
 
@@ -32,10 +32,10 @@ weighted avg       0.99      0.99      0.99      1748
 
      CANDIDATE       0.82      0.77      0.80       411
      CONFIRMED       0.83      0.84      0.83       484
-FALSE POSITIVE       0.98      1.00      0.99       853
+FALSE_POSITIVE       0.98      1.00      0.99       853
 
-      accuracy                           0.90      1748
-     macro avg       0.87      0.87      0.87      1748
+   ___accuracy                           0.90      1748
+  ___macro avg       0.87      0.87      0.87      1748
   weighted avg       0.90      0.90      0.90      1748
 
 
