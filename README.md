@@ -6,9 +6,9 @@ Over a period of nine years in deep space, the NASA Kepler space telescope has b
 
 ## Summary
 
-Three models were built to represent the data using the target value of 3 CANDIDATE, CONFIRMED, and FALSE POSITIVE. Later an assumption was used to group target into two categories. CANDIDATE and CONFIRMED were grouped together as 0 and FALSE POSITIVE was set to 1.
+Four models were built to represent the data using the target value of 3 CANDIDATE, CONFIRMED, and FALSE POSITIVE. Later an assumption was used to group target into two categories. CANDIDATE and CONFIRMED were grouped together as 0 and FALSE POSITIVE was set to 1.
 
-Random Forrest was used to remove features from 40 down to 60 and still retrain accuracy of 0.85 or better in most models
+Random Forrest was used to remove features from 40 down to 16 to achieve the below results. The same features were used for all 4 models with accuracy ranging between 0.84 to 90 with Random Forrest being the best. 
 
 
 # With Target of 3
@@ -32,15 +32,16 @@ Assuming CANDIDATE and CONFIRMED are the same, they were grouped together as 0 a
 
 ## Logistic Regression (Accuracy 0.99)
 
+# The Process
 
-### Preprocess the Data
+## Preprocess the Data
 
 * Preprocess the dataset prior to fitting the model.
 * Perform feature selection and remove unnecessary features.
 * Use `MinMaxScaler` to scale the numerical data.
 * Separate the data into training and testing data.
 
-### Tune Model Parameters
+## Tune Model Parameters
 
 * Use `GridSearch` to tune model parameters.
 * Tune and compare at least two different classifiers.
